@@ -1,0 +1,288 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-img-top {
+  max-width: 10%;
+
+  object-fit: cover; /* This ensures the image fits nicely without stretching */
+}
+
+.card{
+  height:65%
+}
+
+.card-body{
+
+  flex-direction: column-reverse;
+  align-content: flex-end;
+  align-content: flex-end;
+  height: 100%;
+  align-items: self-end;
+}
+
+.card {
+  width: 85%;
+  max-width: 350px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: auto;  /* Ensure the card height adjusts to content */
+}
+
+.card:hover {
+  transform: scale(1.); /* Card grows by 5% */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.card-img-top:hover {
+  opacity: 0.8;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e2e2e2;
+  transition: background-color 0.3s ease;
+}
+
+.card-body:hover {
+  background-color: #f1f1f1;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.card-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.card-text span {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.temperature {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+  }
+  .card-body {
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+.buttons-container {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  z-index: 1000; /* Ensure it's above other elements */
+  width: 100%; /* Ensure full width for button container */
+  text-align: center;
+}
+
+.btn {
+  margin: 0 10px; /* Space between buttons */
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  border-color: #95a5a6;
+}
+
+/*  */
+/* Button Styling */
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Card Container */
+.card-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Card Animations */
+.card {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card.hidden {
+  opacity: 0;
+}
+
+
+.sunny {
+  background: linear-gradient(to top, #ffdb4d, #ff9a00);
+  animation: sunny-animation 5s infinite alternate ease-in-out;
+}
+
+@keyframes sunny-animation {
+  0% {
+      background: linear-gradient(to top, #ffdb4d, #ff9a00);
+  }
+  100% {
+      background: linear-gradient(to top, #ffe680, #ffcc33);
+  }
+}
+
+
+/* Define the keyframes for background color change */
+@keyframes changeBackground {
+  0% {
+      background-color: #92f5d6; /* Tomato */
+  }
+  25% {
+      background-color: #c1abf5; /* LightSalmon */
+  }
+  50% {
+      background-color: #99f2ee; /* LimeGreen */
+  }
+  75% {
+      background-color: #a3cef8; /* DodgerBlue */
+  }
+  100% {
+      background-color: #92f5d6; /* Tomato (back to the start) */
+  }
+ 
+}
+
+/* Apply the animation to the body or any other container */
+body {
+  animation: changeBackground 10s infinite linear; 
+  transition: background-color 1s ease-in-out; 
+}
+.navbar {
+  animation: changeBackground 10s infinite linear; 
+  transition: background-color 1s ease-in-out; 
+}
+
+
+
+@keyframes moveCard{
+  0%{
+    transform: translate(0, 0); 
+
+  }
+  20%{
+    transform: translate(-10px, 0); 
+
+  }
+  40%{
+    transform: translate(10px, 0); 
+
+  }
+  60%{
+    transform: translate(-20px, 0); 
+
+  }
+  80%{
+    transform: translate(20px, 0); 
+
+  }
+  100%{
+    transform: translate(0, 0); 
+
+  }
+
+  
+}
+
+.card{
+  animation: moveCard 3s infinite ease-in-out; 
+
+}
