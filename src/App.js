@@ -1,5 +1,5 @@
 import './App.css';
-import MenuCards from './component/MenuCards';
+import MenuCards from './component/Body';
 import Navbar from './component/Navbar';import {
   BrowserRouter as Router,
   Routes,
